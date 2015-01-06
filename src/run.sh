@@ -1,4 +1,4 @@
 #!/bin/bash
 set -e
 pip install -r /project/requirements.txt
-gunicorn things:app
+cd /project/src && gunicorn -b 0.0.0.0:8000 things:app
